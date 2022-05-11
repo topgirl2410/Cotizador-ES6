@@ -21,7 +21,6 @@ Seguro.prototype.cotizarSeguro = function () {
     let cantidad;
     const base = 2000;
 
-    console.log(this.marca);
     switch (this.marca) {
 
         case '1':
@@ -139,7 +138,7 @@ UI.prototype.mostrarResultado = (total, seguro) => {
         <p class="header">Tu Resumen</p>
         <p class="font-bold">Marca: <span class="font-normal"> ${textoMarca}</span></p>
         <p class="font-bold">Año: <span class="font-normal"> ${year}</span></p>
-        <p class="font-bold">Tipo de Seguro: <span class="font-normal"> ${tipo}</span></p>
+        <p class="font-bold">Tipo de Seguro: <span class="font-normal capitalize"> ${tipo}</span></p>
         <p class="font-bold">Total: <span class="font-normal"> ${total} € </span></p>
 
     
@@ -187,7 +186,7 @@ function cotizarSeguro(e) {
     // Leer el año seleccionado
     const year = document.querySelector('#year').value;
 
-    console.log(year)
+    
 
     // Leer el tipo de cobertura
     const tipo = document.querySelector('input[name="tipo"]:checked').value;
@@ -216,4 +215,4 @@ function cotizarSeguro(e) {
     ui.mostrarResultado(total, seguro);
 
 
-}
+} console

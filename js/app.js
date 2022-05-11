@@ -49,7 +49,18 @@ Seguro.prototype.cotizarSeguro = function () {
 
     cantidad -= ((diferencia * 3) * cantidad) / 100;
 
-    console.log(cantidad);
+    /*
+        Si el seguro es básico se multiplica por un 30% más;
+        Si el seguro es completo se multiplica por un 50% más;
+    */
+
+    if(this.tipo === 'basico') {
+        cantidad *= 1.30;
+    } else {
+        cantidad *= 1.50;
+    }
+
+    return cantidad;
 }
 
 
@@ -149,6 +160,6 @@ function cotizarSeguro(e) {
     seguro.cotizarSeguro();
 
     // Utilizar el prototype que va a cotizar
-
+    
 
 }
